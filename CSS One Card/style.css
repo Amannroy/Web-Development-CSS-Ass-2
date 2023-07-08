@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  header {
+    padding: 20px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar a {
+    margin: 0 10px;
+    color: black;
+    text-decoration: none;
+  }
+
+  .navbar a.apply-button {
+    background-color: rgba(48, 168, 248, 0.986);
+    color: #282c34;
+    padding: 10px 20px;
+    border-radius: 4px;
+  }
+  .apply-button {
+    background-color: rgba(48, 168, 248, 0.986);
+  }
+
+  .main-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+  }
+
+  .left-section {
+    flex: 1;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+
+  .right-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bank-list {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bank-logo {
+    width: 100px;
+    height: auto;
+    margin: 0 10px;
+  }
+
+  .last-two-banks {
+    flex-basis: 100%;
+  }
+
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .apply-button {
+    margin-top: 20px;
+  }
+
+  .card {
+    width: 200px;
+    height: auto;
+    margin-right: 10px;
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .main-section {
+      padding: 30px;
+    }
+
+    .left-section, .right-section {
+      flex: 100%;
+      padding-right: 0;
+      padding-bottom: 30px;
+    }
+
+    .bank-list {
+      justify-content: flex-start;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .main-section {
+      padding: 20px;
+    }
+
+    .bank-list {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      justify-content: flex-start;
+    }
+
+    .bank-logo {
+      margin: 0 5px;
+    }
+  }
